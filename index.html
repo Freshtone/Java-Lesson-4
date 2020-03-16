@@ -40,12 +40,17 @@
 </body>
 <script>
 // Look into this later
-    var rightCode = "4174";
+    //var rightCode = "4174";
     function rightCode()   {
-            if (output = rightCode) {
+            if (output = '4174') {
                 document.getElementById("correct").innerHTML = "Correct Code!";
             }
+        }   else    {
+            document.getElementById("correct").innerHTML = "Wrong Code :(";
+            }
         }
+
+
     // Function receives information from button and takes the input which for the first button will be the number '1' and sends it to the//
     // output we created <p> with id output. The function also holds the value and any other info received after is placed accordingly// 
     function buttonReturn(input) {
