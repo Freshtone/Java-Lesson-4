@@ -18,6 +18,8 @@
 <script>
 var b1 = 1;
 
+// Function receives information from button and takes the input which for the first button will be the number '1' and sends it to the//
+// output we created <p> with id output. The function also holds the value and any other info received after is placed accordingly// 
 function buttonReturn(input) {
     document.getElementById("output").innerHTML += input;
 }
@@ -30,7 +32,8 @@ function buttonReturn(input) {
 <p>Have fun trying to guess the code!</p>
 
 <div>
-    
+
+    <!--Press button and send "buttonReturn("chosen information") to function-->
     <button class="keypad" onclick="buttonReturn('1')">1</button>
     <button class="keypad" onclick="buttonReturn('2')">2</button>
     <button class="keypad" onclick="buttonReturn('3')">3</button><br>
