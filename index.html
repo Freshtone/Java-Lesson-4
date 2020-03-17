@@ -33,11 +33,9 @@
         <button class="keypad" onclick="buttonReturn('9')">9</button>
     
     </div>
-    <button class="verify" onclick="rightCode()">Verify code</button>
+    <button class="verify" onclick="riktigKode()">Verify code</button>
     <button id="clearInput" onclick="clearFunction()">Clear Input</button>
     <div>
-
-        <input id="testing" readonly/>
 
             <p id="output"></p>
             <p id="correct"></p>
@@ -45,19 +43,34 @@
 </body>
 <script>
 
-        function rightCode()   {
-            if (Text=output);  
-                document.getElementById("correct").innerHTML = "Correct Code!";
-        }
-        
-        function clearFunction()    {
-                document.getElementById("clearInput").innerHTML;
-        }
+var rightCode = "1234";
 
-    // Function receives information from button and takes the input which for the first button will be the number '1' and sends it to the//
-    // output we created <p> with id output. The function also holds the value and any other info received after is placed accordingly// 
+        function riktigKode()   {
+            if (output.innerHTML==rightCode) {                  
+                document.getElementById("correct").innerHTML = "Correct Code!";
+                console.log('isrunning');
+             }
+             // using output.innerHTML to point to the output field within the document. Also remember to use == and not just =.
+            else {
+                document.getElementById("correct").innerHTML = "Wrong Code!";
+            }
+        }
+    // function riktigKode() ->
+    // Function checks if the input code is correct in accordance to the variable "rightcode = 1234" (Can change this).
+    // This works by checking the "output" field and seeing if it matches "rightcode". IF the code is correct and matches
+    // it is sent through the if part and displays "correct code". If it is the wrong code it is sent through the ELSE part. 
+        function clearFunction()    {
+                document.getElementById("output").innerHTML = '';
+                document.getElementById("correct").innerHTML = '';
+        }
+    // function clearFunction() ->
+    // Function clears the "output" and replaces it with nothing so it is ready for new information
+    
         function buttonReturn(input) {
                 document.getElementById("output").innerHTML += input;
     }
+    // function buttonReturn(input) ->
+    // Function receives information from button and takes the input which for the first button will be the number '1' and sends it to the//
+    // output we created <p> with id output. The function also holds the value and any other info received after is placed accordingly// 
     </script>
 </html>
